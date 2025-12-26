@@ -30,24 +30,44 @@ File Viewer TUI: Yazi
 Editor: NixVim
 !!REQ!!
 
-# Theming 
-Themes are an important thing in this system and need to be instantenous to apply and easy to swap / edit 
+
+# Themes
 
 !!REQ!!
-Themes need to be applied to the following automatically:
- Window manager (Hyprland borders, gaps, colors)
- Status bar (Waybar)
- Terminal (Kitty/Alacritty)
- Application launcher (Rofi/Wofi)
- Notification daemon (Mako/Dunst)
- Lock screen (Hyprlock/Swaylock)
- Text editor (Neovim/Helix)
- File manager
- GTK applications
- Qt applications
- Wallpaper
- Cursor theme
- Icon theme
+
+**Theme System:**
+- Edit theme in your config file, rebuild to apply
+- All theme configs generated from single source
+
+**Theme Switching:**
+```nix
+# In your configuration:
+theme = "arasaka";  # Change this line
+
+# Then rebuild:
+sudo nixos-rebuild switch --flake .#yourhostname  # System config
+home-manager switch --flake .#youruser           # User config
+```
+
+**Included Themes:**
+- Akasara - Totally not Arasaka Theme
+
+**Themed Components:**
+- Window manager (Hyprland borders, gaps, colors)
+- Status bar (Waybar)
+- Terminal (Kitty)
+- Application launcher (Wofi)
+- Notification daemon (Mako)
+- Lock screen (Hyprlock)
+- Login screen (SDDM)
+- Text editor (NixVim)
+- File managers (Thunar, Yazi)
+- GTK applications
+- Qt applications
+- Wallpaper
+- Cursor theme
+- Icon theme
+
 !!REQ!!
 
 # Keybindings
