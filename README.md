@@ -9,6 +9,384 @@ For now, the README is just so I can lay out the design
 - Clear to user
 - Minimal nix knowledge required
 
+# TODO Checklist
+
+## Core System Setup
+
+### Flake Structure
+- [ ] Create `flake.nix` with proper inputs (nixpkgs, home-manager)
+- [ ] Define `nixosModules.default` output
+- [ ] Define `homeManagerModules.default` output
+- [ ] Set up proper module imports
+- [ ] Configure flake-utils for multi-system support
+
+### Module Architecture
+- [ ] Create `modules/nixos/` directory structure
+- [ ] Create `modules/home/` directory structure
+- [ ] Create `modules/nixos/default.nix` that imports all system modules
+- [ ] Create `modules/home/default.nix` that imports all home modules
+- [ ] Define `mikoshi` option namespace
+- [ ] Create options for username, hostname, theme
+
+## Window Manager & Desktop Environment
+
+### Hyprland Configuration
+- [ ] Enable Hyprland in NixOS module
+- [ ] Create Hyprland home-manager configuration
+- [ ] Configure default keybindings
+- [ ] Set up window rules
+- [ ] Configure workspace behavior (10 workspaces)
+- [ ] Set up gaps and borders
+- [ ] Configure animations
+- [ ] Enable multi-monitor support
+- [ ] Make configuration themeable
+
+### Waybar
+- [ ] Install and enable Waybar
+- [ ] Create base Waybar configuration
+- [ ] Configure workspace module
+- [ ] Configure network module (with nm-applet integration)
+- [ ] Configure audio module (with pavucontrol integration)
+- [ ] Configure battery module (with power profile switching)
+- [ ] Configure Bluetooth module (with blueman integration)
+- [ ] Configure clock/date module
+- [ ] Add custom CSS for animations
+- [ ] Make fully themeable
+- [ ] Add pre-rendered animated icons support
+
+### Window Switcher
+- [ ] Install Hyprshell
+- [ ] Configure Alt+Tab behavior
+- [ ] Theme to match system theme
+
+### Application Launcher
+- [ ] Install Wofi
+- [ ] Create base configuration
+- [ ] Configure keybinding (Super+Space)
+- [ ] Make themeable
+- [ ] Add custom CSS styling
+
+### Notifications
+- [ ] Install Mako
+- [ ] Create base configuration
+- [ ] Configure notification timeout
+- [ ] Set up notification actions
+- [ ] Make themeable
+- [ ] Configure urgency levels
+
+### Lock Screen
+- [ ] Install Hyprlock
+- [ ] Create base configuration
+- [ ] Add custom animations
+- [ ] Make themeable
+- [ ] Configure auto-lock timeout
+- [ ] Set up lock on lid close (laptops)
+
+### Wallpapers
+- [ ] Install swww
+- [ ] Create wallpaper management system
+- [ ] Add smooth transition effects
+- [ ] Make per-theme wallpapers
+- [ ] Add wallpaper directory structure
+
+### Screenshots
+- [ ] Install Grimblast (+ grim, slurp dependencies)
+- [ ] Configure screenshot keybindings
+- [ ] Set up clipboard integration
+- [ ] Create screenshot directory
+- [ ] Add notification on screenshot
+
+### Display Manager (SDDM)
+- [ ] Enable SDDM in NixOS module
+- [ ] Install SDDM theme dependencies
+- [ ] Create custom cyberpunk theme
+- [ ] Add QML animations
+- [ ] Make theme match system theme
+- [ ] Configure auto-login option
+
+## Terminal & Shell
+
+### Kitty
+- [ ] Install Kitty
+- [ ] Create base configuration
+- [ ] Configure keybindings (Ctrl+C/V support)
+- [ ] Make themeable
+- [ ] Configure font settings
+- [ ] Enable ligatures
+
+### Zsh
+- [ ] Install and set Zsh as default shell
+- [ ] Configure basic Zsh settings
+- [ ] Enable command history
+- [ ] Set up auto-suggestions
+- [ ] Set up syntax highlighting
+- [ ] Configure completion system
+
+### Starship
+- [ ] Install Starship
+- [ ] Create base configuration
+- [ ] Make themeable
+- [ ] Configure relevant modules (git, nix, etc.)
+
+### CLI Tools
+- [ ] Install eza (ls replacement)
+- [ ] Install bat (cat replacement)
+- [ ] Install ripgrep
+- [ ] Install fd
+- [ ] Install zoxide
+- [ ] Install fzf
+- [ ] Install btop
+- [ ] Install dust
+- [ ] Configure shell aliases for modern tools
+
+## File Management
+
+### Thunar
+- [ ] Install Thunar
+- [ ] Configure default file associations
+- [ ] Make themeable (GTK)
+- [ ] Set up thumbnail generation
+- [ ] Configure keybinding (Super+E)
+
+### Yazi
+- [ ] Install Yazi
+- [ ] Create base configuration
+- [ ] Make themeable
+- [ ] Configure keybindings
+- [ ] Set up image previews
+
+## Applications
+
+### Web Browsers
+- [ ] Install Brave
+- [ ] Install qutebrowser
+- [ ] Configure qutebrowser base settings
+- [ ] Make qutebrowser themeable
+
+### Media Applications
+- [ ] Install Zathura (PDF)
+- [ ] Configure Zathura settings
+- [ ] Make Zathura themeable
+- [ ] Install imv (images)
+- [ ] Install VLC
+- [ ] Create custom music player (TUI)
+
+### Productivity
+- [ ] Install KeePassXC
+- [ ] Configure KeePassXC integration
+- [ ] Install Obsidian
+
+### Graphics & Recording
+- [ ] Install GIMP
+- [ ] Install OBS Studio
+- [ ] Configure OBS basic settings
+
+### System Tools
+- [ ] Install p7zip, unzip, unrar
+- [ ] Install CopyQ
+- [ ] Configure CopyQ settings
+- [ ] Make CopyQ themeable
+- [ ] Set up CopyQ keybindings
+- [ ] Install hyprpicker
+- [ ] Configure hyprpicker keybinding
+
+## Development Environment
+
+### NixVim
+- [ ] Set up NixVim flake input
+- [ ] Create base NixVim configuration
+- [ ] Configure LSP for Rust (rust-analyzer)
+- [ ] Configure LSP for Python (pyright)
+- [ ] Set up Tree-sitter
+- [ ] Configure Telescope (fuzzy finder)
+- [ ] Set up file explorer (Neo-tree or nvim-tree)
+- [ ] Configure Git integration (Gitsigns, Fugitive)
+- [ ] Set up auto-completion (nvim-cmp)
+- [ ] Configure snippets
+- [ ] Make themeable
+- [ ] Set up custom keybindings
+- [ ] Configure cyberpunk aesthetic
+
+### Languages & Tools
+- [ ] Install Rust toolchain
+- [ ] Install Python
+- [ ] Install pip
+- [ ] Configure direnv
+- [ ] Configure nix-direnv
+
+### Git
+- [ ] Install Git
+- [ ] Create sensible gitconfig defaults
+- [ ] Install Delta (diff viewer)
+- [ ] Install Lazygit
+- [ ] Configure Lazygit theme
+
+### Debugging
+- [ ] Install GDB
+- [ ] Install LLDB
+
+## Theme System
+
+### Theme Infrastructure
+- [ ] Create theme definition structure
+- [ ] Create theme option in mikoshi namespace
+- [ ] Set up color palette system
+- [ ] Create theme validation
+- [ ] Set up theme propagation to all components
+
+### Theme Definitions
+- [ ] Create Arasaka theme (custom cyberpunk)
+- [ ] Create Tokyo Night theme
+- [ ] Create Catppuccin Mocha theme
+- [ ] Create Catppuccin Latte theme
+- [ ] Create Gruvbox theme
+- [ ] Create Nord theme
+- [ ] Create Everforest theme
+
+### Theme Application
+- [ ] Apply theme to Hyprland (borders, colors, gaps)
+- [ ] Apply theme to Waybar
+- [ ] Apply theme to Kitty
+- [ ] Apply theme to Wofi
+- [ ] Apply theme to Mako
+- [ ] Apply theme to Hyprlock
+- [ ] Apply theme to SDDM
+- [ ] Apply theme to NixVim
+- [ ] Apply theme to Thunar (GTK)
+- [ ] Apply theme to Yazi
+- [ ] Apply theme to Qt applications
+- [ ] Apply theme to wallpaper selection
+- [ ] Apply theme to cursor
+- [ ] Apply theme to icons
+- [ ] Apply theme to Zathura
+- [ ] Apply theme to qutebrowser
+
+## System Services
+
+### Audio
+- [ ] Enable PipeWire in NixOS module
+- [ ] Enable WirePlumber
+- [ ] Install pavucontrol
+- [ ] Configure audio hotkeys
+- [ ] Set up volume popup notifications
+
+### Bluetooth
+- [ ] Enable BlueZ in NixOS module
+- [ ] Install blueman
+- [ ] Configure blueman-applet
+- [ ] Set up Bluetooth audio support
+
+### Networking
+- [ ] Enable NetworkManager in NixOS module
+- [ ] Install nm-applet
+- [ ] Configure WiFi support
+- [ ] Set up VPN plugin support (OpenVPN, WireGuard)
+
+### Power Management
+- [ ] Enable TLP for laptops (conditional)
+- [ ] Configure battery optimization
+- [ ] Set up CPU frequency scaling
+- [ ] Configure lid close behavior
+- [ ] Set up auto-sleep on idle
+- [ ] Configure screen timeout
+- [ ] Set up brightness controls
+- [ ] Add brightness popup notifications
+
+### Fonts
+- [ ] Install Nerd Fonts
+- [ ] Install JetBrainsMono Nerd Font
+- [ ] Install Inter font
+- [ ] Install Noto fonts (all variants)
+- [ ] Install Noto Color Emoji
+- [ ] Install Noto CJK fonts
+- [ ] Configure font rendering (FreeType)
+
+### Hardware Support
+- [ ] Configure Intel graphics (auto-detect)
+- [ ] Configure AMD graphics with Vulkan
+- [ ] Create NVIDIA module (optional, user-enabled)
+- [ ] Configure libinput for touchpad
+- [ ] Enable touchpad gestures
+- [ ] Set up natural scrolling
+- [ ] Enable tap-to-click
+- [ ] Configure multi-monitor support
+- [ ] Set up HiDPI support
+- [ ] Create optional CUPS module for printing
+
+## Keybindings
+
+### Window Management
+- [ ] Configure Ctrl+C/V universal clipboard
+- [ ] Set up Super+HJKL window focus
+- [ ] Set up Super+Shift+HJKL window movement
+- [ ] Configure Super+Q close window
+- [ ] Configure Super+F fullscreen toggle
+- [ ] Configure Super+V floating toggle
+
+### Workspaces
+- [ ] Set up Super+[1-9] workspace switching
+- [ ] Set up Super+Shift+[1-9] move to workspace
+- [ ] Configure Super+Tab window switcher
+
+### Launchers
+- [ ] Configure Super+Return terminal
+- [ ] Configure Super+Space launcher
+- [ ] Configure Super+Shift+S screenshot
+- [ ] Configure Super+L lock screen
+- [ ] Configure Super+E file manager
+
+### System
+- [ ] Configure Super+Shift+E logout menu
+- [ ] Configure Super+Shift+R reload config
+
+### Media
+- [ ] Configure volume up/down keys with popup
+- [ ] Configure brightness up/down keys with popup
+
+### Theme
+- [ ] Configure Super+Ctrl+T theme switcher
+
+## User Experience
+
+### Configuration
+- [ ] Document all mikoshi options
+- [ ] Create example configuration
+- [ ] Set up sensible defaults for all options
+- [ ] Create override system for power users
+
+### Updates
+- [ ] Document update process
+- [ ] Test flake update workflow
+- [ ] Ensure updates don't break user configs
+
+### Documentation
+- [ ] Write installation guide
+- [ ] Create keybindings cheat sheet
+- [ ] Document theme switching process
+- [ ] Write customization guide
+- [ ] Create troubleshooting section
+- [ ] Document all mikoshi options
+
+## Testing & Quality
+
+### Testing
+- [ ] Test on fresh NixOS install
+- [ ] Test all keybindings
+- [ ] Test theme switching
+- [ ] Test on multiple hardware configs
+- [ ] Test laptop-specific features
+- [ ] Test multi-monitor setups
+
+### Polish
+- [ ] Ensure all animations work smoothly
+- [ ] Verify theme coherence across all apps
+- [ ] Test clipboard manager reliability
+- [ ] Verify all GUI tools are accessible
+- [ ] Check performance optimization
+
+==========
+
+
 # Installation
 Installation needs to be one command only from a nixos ISO !REQ!
 Swapping existing nixOS to Mikoshi should be easy !REQ!
