@@ -1,7 +1,7 @@
 {
   name = "Akasara";
   
-  colors = {
+  colours = {
     bg = "#FF0000"; #TEST
     bgAlt = "#00FF00"; #TEST
     fg = "#0000FF"; #TEST
