@@ -88,3 +88,33 @@ Themes need to be applied to the following automatically:
 - `Super + Ctrl + T` - Theme switcher menu
 
 !!REQ!!
+
+
+# Shell & CLI Tools
+
+!!REQ!!
+
+**Shell:**
+- Zsh with Starship prompt
+- Syntax highlighting
+- Auto-suggestions
+- Command history search
+
+**Modern CLI Replacements:**
+- `eza` - Better `ls` (colors, icons, git integration)
+- `bat` - Better `cat` (syntax highlighting)
+- `ripgrep (rg)` - Better `grep` (faster searching)
+- `fd` - Better `find` (simpler syntax)
+- `zoxide` - Smart `cd` (learns your habits)
+- `fzf` - Fuzzy finder (search everything)
+
+**System Monitoring:**
+- `btop` - Resource monitor (CPU, RAM, processes)
+- `dust` - Disk usage analyzer
+
+**Development:**
+- `git` with sensible defaults
+- `direnv` - Auto-load project environments
+- Language servers for common languages
+
+!!REQ!!
