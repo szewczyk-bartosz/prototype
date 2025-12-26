@@ -17,8 +17,9 @@
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-      home-manager.nixosModules.home-manager
+        home-manager.nixosModules.home-manager
         mikoshi.nixosModules.default
+        ./configuration.nix
         ./hardware-configuration.nix
         {
           mikoshi = {
