@@ -1,0 +1,3 @@
+{
+    akasara = import ./akasara.nix;
+}
