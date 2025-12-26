@@ -3,8 +3,8 @@
   programs.kitty = {
     enable = true;
     settings = {
-      foreground = selectedTheme.colours.fg;
-      background = selectedTheme.colours.bg;
+      background = selectedTheme.colours.terminal.black;
+      foreground = selectedTheme.colours.terminal.white;
 
       color0 = selectedTheme.colours.terminal.black;
       color1 = selectedTheme.colours.terminal.red;
