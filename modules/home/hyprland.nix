@@ -14,6 +14,20 @@ in
         "$mainMod, J, movefocus, d"
         "$mainMod, K, movefocus, u"
         "$mainMod, L, movefocus, r"
+        "$mainMod SHIFT, H, movewindow, l"
+        "$mainMod SHIFT, J, movewindow, d"
+        "$mainMod SHIFT, K, movewindow, u"
+        "$mainMod SHIFT, L, movewindow, r"
+        "$mainMod, F, fullscreen"
+        "$mainMod, V, togglefloating"
+        # launcher
+        "$mainMod, Space, exec, wofi --show drun"
+        # file explorer
+        "$mainMod, E, exec, thunar"
+        # lock screen
+        "$mainMod, L, exec, hyprlock"
+        # reload config
+        "$mainMod SHIFT, R, exec, hyprctl reload"
       ]
       ++ (map (i: "$mainMod, ${toString i}, workspace, ${toString i}") workspaces)
       ++ (map (i: "$mainMod SHIFT, ${toString i}, movetoworkspace, ${toString i}") workspaces);
