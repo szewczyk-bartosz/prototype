@@ -2,53 +2,53 @@
   name = "Akasara";
   
   colours = {
-    bg = "#FF0000"; #TEST
-    bgAlt = "#00FF00"; #TEST
-    fg = "#0000FF"; #TEST
-    fgAlt = "#FFFF00"; #TEST
-    
+    bg = "#0a0a0a";
+    bgAlt = "#1a1a1a";
+    fg = "#00d9ff";
+    fgAlt = "#008fb3";
+
     # Accents
-    primary = "#FF00FF"; #TEST
-    secondary = "#00FFFF"; #TEST
-    tertiary = "#00FF00";
-    
+    primary = "#ff0080";
+    secondary = "#00d9ff";
+    tertiary = "#ff00ff";
+
     # Semantic
-    success = "#00FF00"; #TEST
-    warning = "#FFA500"; #TEST
-    error = "#FF0000"; #TEST
-    info = "#0000FF"; #TEST
-    
+    success = "#00ff88";
+    warning = "#ffaa00";
+    error = "#ff0055";
+    info = "#00d9ff";
+
     # UI
-    border = "#FF00FF"; #TEST
-    selection = "#FFFF0088"; #TEST
-    hover = "#00FFFF88"; #TEST
+    border = "#ff0080";
+    selection = "#ff008044";
+    hover = "#ff008066";
 
     # Contrasting text colors for use on accent backgrounds
-    onPrimary = "#000000"; #TEST
-    onSecondary = "#000000"; #TEST
-    onTertiary = "#000000"; #TEST
-    onSuccess = "#000000"; #TEST
-    onWarning = "#000000"; #TEST
-    onError = "#FFFFFF"; #TEST
+    onPrimary = "#0a0a0a";
+    onSecondary = "#0a0a0a";
+    onTertiary = "#0a0a0a";
+    onSuccess = "#0a0a0a";
+    onWarning = "#0a0a0a";
+    onError = "#ffffff";
     
     terminal = {
-      black = "#000000"; #TEST
-      red = "#FF0000"; #TEST
-      green = "#00FF00"; #TEST
-      yellow = "#FFFF00"; #TEST
-      blue = "#0000FF"; #TEST
-      magenta = "#FF00FF"; #TEST
-      cyan = "#00FFFF"; #TEST
-      white = "#FFFFFF"; #TEST
-       #TEST
-      brightBlack = "#888888"; #TEST
-      brightRed = "#FF8888"; #TEST
-      brightGreen = "#88FF88"; #TEST
-      brightYellow = "#FFFF88"; #TEST
-      brightBlue = "#8888FF"; #TEST
-      brightMagenta = "#FF88FF"; #TEST
-      brightCyan = "#88FFFF"; #TEST
-      brightWhite = "#FFFFFF"; #TEST
+      black = "#0a0a0a";
+      red = "#ff0055";
+      green = "#00ff88";
+      yellow = "#ffaa00";
+      blue = "#00d9ff";
+      magenta = "#ff0080";
+      cyan = "#00d9ff";
+      white = "#ffffff";
+
+      brightBlack = "#4a4a4a";
+      brightRed = "#ff3388";
+      brightGreen = "#44ffaa";
+      brightYellow = "#ffcc44";
+      brightBlue = "#44eeff";
+      brightMagenta = "#ff44aa";
+      brightCyan = "#44eeff";
+      brightWhite = "#ffffff";
     };
   };
   
