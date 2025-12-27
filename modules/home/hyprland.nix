@@ -37,6 +37,7 @@ in
         "$mainMod" = "ALT";
         "col.active_border" = "rgb(${builtins.substring 1 (-1) selectedTheme.colours.primary})";
         "col.inactive_border" = "rgb(${builtins.substring 1 (-1) selectedTheme.colours.secondary})";
+	"exec-once" = "waybar";
       };
     };
   };

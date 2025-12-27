@@ -1,5 +1,5 @@
 { config, ... }:
 
 {
-  imports = [ ./hyprland.nix ./kitty.nix];
+  imports = [ ./waybar.nix ./hyprland.nix ./kitty.nix ];
 }

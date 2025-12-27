@@ -6,6 +6,12 @@
     environment.systemPackages = with pkgs; [
       vim
       git
+      cowsay
     ];
+
+    services.pipewire = {
+      enable = true;
+      pulse.enable = true;
+    };
   };
 }

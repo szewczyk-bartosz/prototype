@@ -10,6 +10,7 @@
     # Accents
     primary = "#FF00FF"; #TEST
     secondary = "#00FFFF"; #TEST
+    tertiary = "#00FF00";
     
     # Semantic
     success = "#00FF00"; #TEST
