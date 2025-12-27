@@ -114,75 +114,6 @@ in
               end
             '';
           };
-          highlights = {
-            # Main buffer/tab
-            buffer_selected = {
-              fg = "${selectedTheme.colours.onPrimary}";
-              bg = "${selectedTheme.colours.primary}";
-              bold = true;
-              italic = false;
-            };
-            tab_selected = {
-              fg = "${selectedTheme.colours.onPrimary}";
-              bg = "${selectedTheme.colours.primary}";
-              bold = true;
-            };
-
-            # Numbers and diagnostics
-            numbers_selected = {
-              fg = "${selectedTheme.colours.onPrimary}";
-              bg = "${selectedTheme.colours.primary}";
-              bold = true;
-            };
-            diagnostic_selected = {
-              fg = "${selectedTheme.colours.onPrimary}";
-              bg = "${selectedTheme.colours.primary}";
-              bold = true;
-            };
-            hint_selected = {
-              fg = "${selectedTheme.colours.onPrimary}";
-              bg = "${selectedTheme.colours.primary}";
-              bold = true;
-            };
-            info_selected = {
-              fg = "${selectedTheme.colours.onPrimary}";
-              bg = "${selectedTheme.colours.primary}";
-              bold = true;
-            };
-            warning_selected = {
-              fg = "${selectedTheme.colours.onPrimary}";
-              bg = "${selectedTheme.colours.primary}";
-              bold = true;
-            };
-            error_selected = {
-              fg = "${selectedTheme.colours.onPrimary}";
-              bg = "${selectedTheme.colours.primary}";
-              bold = true;
-            };
-
-            # UI elements
-            separator_selected = {
-              fg = "${selectedTheme.colours.primary}";
-              bg = "${selectedTheme.colours.primary}";
-            };
-            close_button_selected = {
-              fg = "${selectedTheme.colours.onPrimary}";
-              bg = "${selectedTheme.colours.primary}";
-            };
-            modified_selected = {
-              fg = "${selectedTheme.colours.onPrimary}";
-              bg = "${selectedTheme.colours.primary}";
-            };
-            duplicate_selected = {
-              fg = "${selectedTheme.colours.onPrimary}";
-              bg = "${selectedTheme.colours.primary}";
-            };
-            pick_selected = {
-              fg = "${selectedTheme.colours.onPrimary}";
-              bg = "${selectedTheme.colours.primary}";
-              bold = true;
-            };
-          };
         };
       };
 
@@ -274,5 +205,41 @@ in
         };
       };
     };
+
+    # Custom bufferline highlights applied via extraConfigLua
+    extraConfigLua = ''
+      -- Set bufferline highlights for selected tabs
+      vim.api.nvim_set_hl(0, 'BufferLineBufferSelected', {
+        fg = '${selectedTheme.colours.onPrimary}',
+        bg = '${selectedTheme.colours.primary}',
+        bold = true
+      })
+      vim.api.nvim_set_hl(0, 'BufferLineTabSelected', {
+        fg = '${selectedTheme.colours.onPrimary}',
+        bg = '${selectedTheme.colours.primary}',
+        bold = true
+      })
+      vim.api.nvim_set_hl(0, 'BufferLineNumbersSelected', {
+        fg = '${selectedTheme.colours.onPrimary}',
+        bg = '${selectedTheme.colours.primary}',
+        bold = true
+      })
+      vim.api.nvim_set_hl(0, 'BufferLineCloseButtonSelected', {
+        fg = '${selectedTheme.colours.onPrimary}',
+        bg = '${selectedTheme.colours.primary}'
+      })
+      vim.api.nvim_set_hl(0, 'BufferLineModifiedSelected', {
+        fg = '${selectedTheme.colours.onPrimary}',
+        bg = '${selectedTheme.colours.primary}'
+      })
+      vim.api.nvim_set_hl(0, 'BufferLineDiagnosticSelected', {
+        fg = '${selectedTheme.colours.onPrimary}',
+        bg = '${selectedTheme.colours.primary}'
+      })
+      vim.api.nvim_set_hl(0, 'BufferLineSeparatorSelected', {
+        fg = '${selectedTheme.colours.primary}',
+        bg = '${selectedTheme.colours.primary}'
+      })
+    '';
   };
 }
