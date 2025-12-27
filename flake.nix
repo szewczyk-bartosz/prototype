@@ -15,7 +15,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixvim, ... }: {
+  outputs = { self, nixpkgs, home-manager, ... }: {
     nixosModules = {
         default =
         {
@@ -47,7 +47,7 @@
       }:
       {
         imports = [
-          nixvim.homeManagerModules.nixvim
+          self.inputs.nixvim.homeManagerModules.nixvim
           (import ./modules/home/default.nix)
         ];
         options.mikoshi = (import ./options.nix lib).mikoshiOptions;
