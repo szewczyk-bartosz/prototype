@@ -3,6 +3,7 @@
 {
   imports = [
     ./waybar.nix
+    ./fonts.nix
     ./brave.nix
     ./hyprland.nix
     ./kitty.nix
