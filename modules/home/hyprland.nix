@@ -34,6 +34,9 @@ in
         "$mainMod SHIFT, S, exec, grimblast copy area"
         # clipboard manager
         "$mainMod, C, exec, copyq toggle"
+        # Universal clipboard (Super+C/V like Omarchy)
+        "SUPER, C, sendshortcut, CTRL, Insert"
+        "SUPER, V, sendshortcut, SHIFT, Insert"
       ]
       ++ (map (i: "$mainMod, ${toString i}, workspace, ${toString i}") workspaces)
       ++ (map (i: "$mainMod SHIFT, ${toString i}, movetoworkspace, ${toString i}") workspaces);
