@@ -9,9 +9,8 @@ in
     swww
   ];
 
-  # Auto-start swww daemon and set wallpaper
+  # Auto-start swww daemon and set wallpaper immediately
   wayland.windowManager.hyprland.settings.exec-once = [
-    "swww-daemon"
-    "swww img ${selectedTheme.wallpaper}"
+    "swww-daemon && swww img ${selectedTheme.wallpaper} --transition-type=fade --transition-duration=0"
   ];
 }

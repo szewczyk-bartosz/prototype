@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 let
   themes = import ../../themes;
@@ -29,7 +29,9 @@ in
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
-    theme = "mikoshi";
+
+    # Use package with our theme
+    package = pkgs.libsForQt5.sddm;
 
     settings = {
       Theme = {
@@ -43,10 +45,13 @@ in
     };
   };
 
-  # Install custom SDDM theme
+  # Install custom SDDM theme and dependencies
   environment.systemPackages = with pkgs; [
     libsForQt5.qt5.qtgraphicaleffects
     libsForQt5.qt5.qtquickcontrols2
     mikoshiSddmTheme
   ];
+
+  # Ensure SDDM can find the theme
+  environment.pathsToLink = [ "/share/sddm" ];
 }

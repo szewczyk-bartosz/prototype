@@ -58,6 +58,12 @@ in
         "exec-once" = "waybar";
       };
 
+      misc = {
+        # Set background color to match theme (prevents flash on startup)
+        background_color = "rgb(${builtins.substring 1 (-1) selectedTheme.colours.bg})";
+        force_default_wallpaper = 0;  # Disable Hyprland's default anime wallpaper
+      };
+
       # Animations
       animation = [
         "windows, 1, 4, default, popin 80%"
@@ -65,7 +71,7 @@ in
         "border, 1, 10, default"
         "borderangle, 1, 8, default"
         "fade, 1, 7, default"
-        "workspaces, 1, 6, default, slide"
+        "workspaces, 1, 5, default, fade"
       ];
 
       bezier = [
