@@ -8,9 +8,14 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }: {
+  outputs = { self, nixpkgs, home-manager, nixvim, ... }: {
     nixosModules = {
         default =
         {
@@ -42,6 +47,7 @@
       }:
       {
         imports = [
+          nixvim.homeManagerModules.nixvim
           (import ./modules/home/default.nix)
         ];
         options.mikoshi = (import ./options.nix lib).mikoshiOptions;
