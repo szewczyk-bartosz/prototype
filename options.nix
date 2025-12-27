@@ -11,5 +11,17 @@ lib: {
       type = lib.types.nullOr lib.types.str;
       description = "neovim colorscheme preset (null = use system theme, string = use preset like 'tokyonight')";
     };
+
+    git = {
+      userName = lib.mkOption {
+        type = lib.types.str;
+        description = "Git user name (required)";
+      };
+
+      userEmail = lib.mkOption {
+        type = lib.types.str;
+        description = "Git user email (required)";
+      };
+    };
   };
 }

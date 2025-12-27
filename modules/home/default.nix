@@ -13,6 +13,8 @@
     ./thunar.nix
     ./yazi.nix
     ./network-manager.nix
+    ./claude-code.nix
+    ./git.nix
     ./hyprshell.nix
     ./grimblast.nix
     ./copyq.nix

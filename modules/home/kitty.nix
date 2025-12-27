@@ -9,6 +9,7 @@ in
     settings = {
       background = selectedTheme.colours.terminal.black;
       foreground = selectedTheme.colours.terminal.white;
+      background_opacity = "0.85";
 
       color0 = selectedTheme.colours.terminal.black;
       color1 = selectedTheme.colours.terminal.red;
