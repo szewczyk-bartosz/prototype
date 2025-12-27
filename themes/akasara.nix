@@ -20,8 +20,8 @@
 
     # UI
     border = "#ff0080";
-    selection = "#ff8044";
-    hover = "#ff8066";
+    selection = "#ff0080";
+    hover = "#ff0080";
 
     # Contrasting text colors for use on accent backgrounds
     onPrimary = "#0a0a0a";

@@ -72,11 +72,9 @@ in
 
       #entry:selected {
         background-color: ${selectedTheme.colours.primary};
-        color: ${selectedTheme.colours.onPrimary};
       }
 
       #text:selected {
-        color: ${selectedTheme.colours.onPrimary};
       }
     '';
   };
