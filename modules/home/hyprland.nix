@@ -27,11 +27,9 @@ in
         # file explorer
         "$mainMod, E, exec, thunar"
         # lock screen
-        "CTRL, L, exec, hyprlock"
+        "SUPER, L, exec, hyprlock"
         # reload config
         "$mainMod SHIFT, R, exec, hyprctl reload"
-        # window switcher
-        "$mainMod, Tab, exec, hyprshell"
         # screenshot
         "$mainMod SHIFT, S, exec, grimblast copy area"
         # clipboard manager

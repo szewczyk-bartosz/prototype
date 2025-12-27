@@ -3,10 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    
+
     # Reference parent Mikoshi flake
     mikoshi.url = "path:..";
-    
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -23,10 +23,12 @@
         ./hardware-configuration.nix
         {
           mikoshi.theme = "sane";
-	  home-manager.users.cheryllamb = {
-	    imports = [ mikoshi.homeManagerModules.default ];
-	    home.stateVersion = "26.05";
-	  };
+          mikoshi.git.userEmail = "cheryllamb123098@protonmail.com";
+          mikoshi.git.userName = "szewczyk-bartosz";
+          home-manager.users.cheryllamb = {
+            imports = [ mikoshi.homeManagerModules.default ];
+            home.stateVersion = "26.05";
+          };
         }
       ];
     };
