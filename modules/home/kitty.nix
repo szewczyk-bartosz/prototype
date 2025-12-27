@@ -13,6 +13,8 @@ in
       foreground = selectedTheme.colours.terminal.white;
       background_opacity = "0.85";
 
+      font = selectedTheme.fonts.mono;
+
       color0 = selectedTheme.colours.terminal.black;
       color1 = selectedTheme.colours.terminal.red;
       color2 = selectedTheme.colours.terminal.green;

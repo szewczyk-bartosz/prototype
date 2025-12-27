@@ -53,8 +53,8 @@
   };
 
   fonts = {
-    main = "JetBrainsMono Nerd Font";
-    mono = "JetBrainsMono Nerd Font Mono";
+    main = "3270 Nerd Font Mono";
+    mono = "3270 Nerd Font Mono";
     size = 11;
   };
 
