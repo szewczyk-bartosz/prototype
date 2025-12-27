@@ -1,0 +1,12 @@
+[SddmGreeterTheme]
+Name=Mikoshi
+Description=Cyberpunk themed SDDM greeter for Mikoshi
+Author=Mikoshi
+License=MIT
+Type=sddm-theme
+Version=1.0
+Website=https://github.com/yourusername/Mikoshi
+MainScript=Main.qml
+ConfigFile=theme.conf
+Theme-Id=mikoshi
+Theme-API=2.0

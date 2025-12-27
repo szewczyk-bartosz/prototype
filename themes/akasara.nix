@@ -58,6 +58,6 @@
     size = 11;
   };
 
-  cursor = "Bibata-Modern-Classic";
+  cursor = "Nordzy-cursors";
   icon = "Papirus-Dark";
 }

@@ -15,7 +15,7 @@ in
 
     cursorTheme = {
       name = selectedTheme.cursor;
-      package = pkgs.bibata-cursors;
+      package = pkgs.nordzy-cursor-theme;
     };
 
     theme = {
@@ -46,7 +46,7 @@ in
 
   home.packages = with pkgs; [
     papirus-icon-theme
-    bibata-cursors
+    nordzy-cursor-theme
     adwaita-icon-theme
   ];
 

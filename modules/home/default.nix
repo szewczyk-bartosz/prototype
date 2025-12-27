@@ -21,5 +21,7 @@
     ./copyq.nix
     ./swww.nix
     ./gtk.nix
+    ./rust.nix
+    ./python.nix
   ];
 }
