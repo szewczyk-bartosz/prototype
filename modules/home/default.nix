@@ -18,5 +18,6 @@
     ./swww.nix
     ./zsh.nix
     ./starship.nix
+    ./gtk.nix
   ];
 }
