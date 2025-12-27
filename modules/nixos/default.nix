@@ -3,6 +3,7 @@
 {
   imports = [
     ./sddm.nix
+    ./networkmanager.nix
   ];
 
   config = {

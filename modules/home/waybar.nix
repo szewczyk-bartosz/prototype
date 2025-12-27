@@ -61,6 +61,7 @@ in
           format-disconnected = "⚠ Disconnected";
           tooltip-format = "{ifname} via {gwaddr}";
           tooltip-format-wifi = " {essid} ({signalStrength}%)";
+          on-click = "nm-connection-editor";
         };
         
         pulseaudio = {

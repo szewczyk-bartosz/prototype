@@ -12,6 +12,7 @@
     ./hyprlock.nix
     ./thunar.nix
     ./yazi.nix
+    ./network-manager.nix
     ./hyprshell.nix
     ./grimblast.nix
     ./copyq.nix
