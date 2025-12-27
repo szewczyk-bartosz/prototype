@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./sddm.nix
+    ./ly.nix
     ./networkmanager.nix
   ];
 
