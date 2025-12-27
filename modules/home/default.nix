@@ -1,8 +1,8 @@
-{ username, hostname, theme, ... }:
+{ config, ... }:
 
 let
   themes = import ../../themes;
-  selectedTheme = themes.${theme};
+  selectedTheme = themes.${config.mikoshi.theme};
 in 
 {
   imports = [ ./hyprland.nix ./kitty.nix];

@@ -22,12 +22,11 @@
         ./configuration.nix
         ./hardware-configuration.nix
         {
-          mikoshi = {
-            username = "cheryllamb";
-            hostname = "nixos";
-            theme = "akasara";
-          };
+          mikoshi.theme = "akasara";
         }
+        home-manager.users.cheryllamb = {
+            imports = [ mikoshi.homeManagerModules.default ];
+          }
       ];
     };
   };
