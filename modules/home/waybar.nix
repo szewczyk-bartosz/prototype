@@ -23,8 +23,6 @@ in
           "custom/separator"
           "network"
           "custom/separator"
-          "custom/updates"
-          "custom/separator"
           "clock"
           "custom/separator"
           "pulseaudio"
