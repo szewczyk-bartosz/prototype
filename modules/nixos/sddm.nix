@@ -29,9 +29,7 @@ in
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
-
-    # Use package with our theme
-    package = pkgs.libsForQt5.sddm;
+    theme = "mikoshi";
 
     settings = {
       Theme = {
