@@ -30,6 +30,12 @@ in
         "$mainMod, L, exec, hyprlock"
         # reload config
         "$mainMod SHIFT, R, exec, hyprctl reload"
+        # window switcher
+        "$mainMod, Tab, exec, hyprshell"
+        # screenshot
+        "$mainMod SHIFT, S, exec, grimblast copy area"
+        # clipboard manager
+        "$mainMod, C, exec, copyq toggle"
       ]
       ++ (map (i: "$mainMod, ${toString i}, workspace, ${toString i}") workspaces)
       ++ (map (i: "$mainMod SHIFT, ${toString i}, movetoworkspace, ${toString i}") workspaces);
