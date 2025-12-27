@@ -91,9 +91,9 @@ in
         };
 
         network = {
-          format-wifi = " ";
-          format-ethernet = " ";
-          format-disconnected = "⚠";
+          format-wifi = "󰖩 ";
+          format-ethernet = "󰈀 ";
+          format-disconnected = "󰖪 ";
           tooltip-format = "{ifname}: {ipaddr}";
           tooltip-format-wifi = "{essid} ({signalStrength}%)";
           on-click = "nm-connection-editor";
@@ -101,9 +101,9 @@ in
 
         pulseaudio = {
           format = "{icon}";
-          format-muted = "";
+          format-muted = "󰖁";
           format-icons = {
-            default = [ "" "" "" ];
+            default = [ "󰕿" "󰖀" "󰕾" ];
           };
           on-click = "pavucontrol";
           tooltip = false;
