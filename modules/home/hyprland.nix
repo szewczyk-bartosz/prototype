@@ -88,6 +88,12 @@ in
 
       # Monitor configuration
       monitor = config.mikoshi.monitor;
+
+      # Input configuration
+      input = {
+        kb_layout = config.mikoshi.keyboardLayout;
+        follow_mouse = 1;
+      };
     };
   };
 
