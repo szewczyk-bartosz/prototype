@@ -123,7 +123,7 @@ in
     
     style = ''
       * {
-        font-family: "JetBrainsMono Nerd Font";
+        font-family: "3270 Nerd Font";
         font-size: 12px;
         min-height: 0;
         font-weight: bold;
