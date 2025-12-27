@@ -4,6 +4,7 @@
   # Set zsh as the default shell
   home.sessionVariables = {
     SHELL = "${pkgs.zsh}/bin/zsh";
+    NIX_BUILD_SHELL = "${pkgs.zsh}/bin/zsh";
   };
 
   programs.zsh = {
