@@ -301,6 +301,26 @@
           silent = true;
         };
       }
+
+      # Color picker
+      {
+        mode = "n";
+        key = "<leader>cp";
+        action = "<cmd>CccPick<CR>";
+        options = {
+          desc = "Pick color";
+          silent = true;
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>ct";
+        action = "<cmd>CccHighlighterToggle<CR>";
+        options = {
+          desc = "Toggle color preview";
+          silent = true;
+        };
+      }
     ];
   };
 }

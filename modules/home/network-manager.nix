@@ -2,12 +2,8 @@
 
 {
   # NetworkManager applet for GUI WiFi management
+  # We don't show the tray icon, but keep the package for nm-connection-editor
   home.packages = with pkgs; [
     networkmanagerapplet
-  ];
-
-  # Auto-start nm-applet
-  wayland.windowManager.hyprland.settings.exec-once = [
-    "nm-applet --indicator"
   ];
 }

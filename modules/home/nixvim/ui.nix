@@ -81,7 +81,7 @@ in
             }
             {
               __unkeyed-1 = "<leader>c";
-              group = "Code";
+              group = "Color/Code";
             }
             {
               __unkeyed-1 = "<leader>t";
@@ -254,18 +254,14 @@ in
         };
       };
 
-      # Colorize color codes
-      nvim-colorizer = {
+      # Color picker and previewer
+      ccc = {
         enable = true;
-        userDefaultOptions = {
-          RGB = true;
-          RRGGBB = true;
-          names = false;
-          RRGGBBAA = true;
-          rgb_fn = true;
-          hsl_fn = true;
-          css = true;
-          css_fn = true;
+        settings = {
+          highlighter = {
+            auto_enable = true;
+            lsp = true;
+          };
         };
       };
     };
