@@ -2,8 +2,12 @@
 
 {
   home.packages = with pkgs; [
-    # Rust toolchain with cargo, rustc, rustfmt, clippy, etc.
-    rustup
+    # Pre-built Rust toolchain from nixpkgs (instant download)
+    cargo
+    rustc
+    rustfmt
+    clippy
+    rust-analyzer
 
     # Additional Rust tools
     cargo-watch      # Auto-rebuild on file changes
@@ -20,14 +24,13 @@
   home.sessionVariables = {
     # This makes cargo binaries available in PATH
     CARGO_HOME = "$HOME/.cargo";
-    RUSTUP_HOME = "$HOME/.rustup";
   };
 
   home.sessionPath = [
     "$HOME/.cargo/bin"
   ];
 
-  # Optional: Auto-update rustup components
+  # Cargo configuration
   home.file.".cargo/config.toml".text = ''
     [build]
     jobs = 4  # Parallel compilation jobs
