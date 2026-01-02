@@ -8,6 +8,10 @@ in
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
+      input =
+        {
+          "kb_layout" = "gb";
+        };
       bind = [
         "$mainMod, Return, exec, kitty"
         "$mainMod SHIFT, Q, killactive"
@@ -61,7 +65,7 @@ in
       misc = {
         # Set background color to match theme (prevents flash on startup)
         background_color = "rgb(${builtins.substring 1 (-1) selectedTheme.colours.bg})";
-        force_default_wallpaper = 0;  # Disable Hyprland's default anime wallpaper
+        force_default_wallpaper = 0; # Disable Hyprland's default anime wallpaper
       };
 
       # Animations
@@ -93,6 +97,6 @@ in
 
   # Install audio control tools
   home.packages = with pkgs; [
-    wireplumber  # For wpctl
+    wireplumber # For wpctl
   ];
 }
