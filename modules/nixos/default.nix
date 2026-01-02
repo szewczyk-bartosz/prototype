@@ -14,6 +14,9 @@
       cowsay
     ];
 
+    # Set keyboard layout system-wide
+    console.keyMap = config.mikoshi.keyboardLayout;
+
     services.tumbler.enable = true;
     services.pipewire = {
       enable = true;

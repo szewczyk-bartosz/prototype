@@ -18,6 +18,12 @@ lib: {
       description = "Hyprland monitor configuration (format: 'name,resolution,position,scale')";
     };
 
+    keyboardLayout = lib.mkOption {
+      default = "gb";
+      type = lib.types.str;
+      description = "Keyboard layout (e.g., 'us', 'gb', 'de')";
+    };
+
     git = {
       userName = lib.mkOption {
         type = lib.types.str;
