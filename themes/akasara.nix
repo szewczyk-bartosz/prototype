@@ -33,7 +33,7 @@
 
     terminal = {
       black = "#0a0a0a";
-      red = "#ff0055";
+      red = "#a70055";
       green = "#ff3388";
       yellow = "#7a3388";
       blue = "#00d9ff";
